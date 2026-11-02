@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>班级作业通知</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+        body {
+            background-color: #1a2b4d;
+            color: #ffffff;
+            padding: 24px;
+        }
+        .container {
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        .header-left h1 {
+            font-size: 36px;
+            font-weight: bold;
+        }
+        .header-left p {
+            color: #cccccc;
+            font-size: 18px;
+            margin-top: 6px;
+        }
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap:16px;
+        }
+        .time-text {
+            font-size:32px;
+            color:#ffc837;
+            font-weight:bold;
+        }
+        .count-box {
+            background-color:#ffc837;
+            color:#1a2b4d;
+            padding:8px 16px;
+            border-radius:12px;
+        }
+        .count-box strong {
+            font-size:40px;
+        }
+        .main-wrap {
+            display: grid;
+            grid-template-columns: 72% 26%;
+            gap:2%;
+        }
+        .homework-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap:20px;
+        }
+        .card {
+            background-color:#253b69;
+            border-radius:14px;
+            padding:24px;
+        }
+        .card-title {
+            display:flex;
+            align-items:center;
+            gap:8px;
+            font-size:20px;
+            font-weight:bold;
+            margin-bottom:16px;
+        }
+        .yellow-dot {
+            width:8px;
+            height:20px;
+            background:#ffc837;
+            border-radius:4px;
+        }
+        .red-tag {
+            color:#ff5555;
+            font-weight:bold;
+            margin-right:8px;
+        }
+        .blue-tag {
+            color:#4898ff;
+            font-weight:bold;
+            margin-right:8px;
+        }
+        .card ul {
+            list-style:none;
+            font-size:20px;
+            line-height:1.8;
+        }
+        .side-card.todo {
+            border:2px solid #ff7744;
+        }
+        .todo-item {
+            background:#2b406b;
+            border-radius:10px;
+            padding:16px;
+            margin-bottom:12px;
+        }
+        .course-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap:10px;
+            margin-top:12px;
+        }
+        .course-item {
+            padding:8px;
+            border-radius:8px;
+            text-align:center;
+        }
+        .c1 {background:#ed4c5c;}
+        .c2 {background:#3478e8;}
+        .c3 {background:#ff9500;}
+        .c4 {background:#34b769;}
+        .c5 {background:#a855d8;}
+        .c6 {background:#ffc837;color:#1a2b4d;}
+        .footer-quote {
+            margin-top:24px;
+            background:#253b69;
+            padding:20px 24px;
+            border-radius:14px;
+            font-size:20px;
+            color:#dddddd;
+        }
+        .footer-quote span {
+            float:right;
+            font-size:16px;
+            color:#bbbbbb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-top">
+            <div class="header-left">
+                <h1>同学们，晚上好，我是迪迦奥特曼</h1>
+                <p>10月28日 周三</p>
+            </div>
+            <div class="header-right">
+                <div class="time-text">19:14</div>
+                <div class="count-box">
+                    <div>距离期末考试</div>
+                    <strong>95</strong>
+                    <div style="font-size:14px">剩余 95 天，继续加油</div>
+                </div>
+            </div>
+        </div>
+        <div class="main-wrap">
+            <div class="left-area">
+                <div class="card-title">
+                    <span class="yellow-dot"></span>
+                    <span>今日作业</span>
+                </div>
+                <div class="homework-row">
+                    <div class="card">
+                        <ul>
+                            <li><span class="red-tag">语文</span>1.今天学习了《葡萄沟》，请大声熟读课文</li>
+                            <li>2.讲解了本课生字词，拼音本上进行练习</li>
+                            <li>3.坚持阅读并记录</li>
+                            <li><span class="red-tag">语文</span>1.今天学习了《葡萄沟》，请大声熟读课文</li>
+                            <li>2.讲解了本课生字词，拼音本上进行练习</li>
+                            <li>3.坚持阅读并记录</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <ul>
+                            <li><span class="blue-tag">数学</span>1.背诵3和4的乘法口诀</li>
+                            <li>7页的乘法算式和乘法口诀，并对一对口诀</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="right-area">
+                <div class="card todo">
+                    <div class="card-title">
+                        <span class="yellow-dot"></span>
+                        <span>今日待办</span>
+                    </div>
+                    <div class="todo-item">
+                        <div>下午大扫除，带好抹布</div>
+                    </div>
+                    <div class="todo-item">
+                        <div>队列排练，穿校服长裤</div>
+                    </div>
+                </div>
+                <div class="card" style="margin-top:16px;">
+                    <div class="card-title">
+                        <span class="yellow-dot"></span>
+                        <span>今日课表</span>
+                    </div>
+                    <div class="course-grid">
+                        <div class="course-item c1">1 语文</div>
+                        <div class="course-item c2">2 数学</div>
+                        <div class="course-item c3">3 英语</div>
+                        <div class="course-item c4">4 体育</div>
+                        <div class="course-item c5">5 美术</div>
+                        <div class="course-item c6">6 班会</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-quote">
+            “现在流的汗，都是未来的光”
+            <span>——班主任寄语</span>
+        </div>
+    </div>
+</body>
+</html>
